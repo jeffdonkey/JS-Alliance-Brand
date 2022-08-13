@@ -17,8 +17,14 @@ function addCustomerName() {
 
 function toggleColors() {
     // <!-- todo: Change all classes named 'tm-white-rect' to 'tm-blue-rect' -->
-    let colorChange1 = document.getElementsByClass('')
+    // using querySelectorAll finds all elements that matches a CSS selector
+    // handling behaviour is like an array index
+    let el = document.querySelectorAll('.tm-white-rect');
 
+    for (i = 0; i < el.length; ++i) {
+        el[i].classList.add('tm-blue-rect');
+        el[i].classList.remove('tm-white-rect');
+    }
 };
 
 function hideElement() {
